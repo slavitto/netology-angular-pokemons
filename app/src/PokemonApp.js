@@ -15,9 +15,17 @@ angular
             templateUrl: 'src/PokemonDetail/PokemonDetail.html',
             controller: 'PokemonDetailCtrl'
         }).
+        when('/berries/:berryId', {
+            templateUrl: 'src/BerryDetail/BerryDetail.html',
+            controller: 'BerryDetailCtrl'
+        }).
         when('/create', {
             templateUrl: 'src/CreatePokemon/CreatePokemon.html',
             controller: 'CreatePokemonCtrl'
+        }).
+        when('/update/:pokemonId', {
+            templateUrl: 'src/UpdatePokemon/UpdatePokemon.html',
+            controller: 'UpdatePokemonCtrl'
         }).
         when('/realtime/:userName', {
             templateUrl: 'src/PokemonRealtime/PokemonRealtime.html',

@@ -2,6 +2,10 @@ angular
     .module('PokemonApp')
     .factory('PokemonsService', function($http) {
 
+            $http.defaults.headers['application-id'] = "3BAA6A88-43D6-3625-FF64-FCAB5D47EA00";
+            $http.defaults.headers['secret-key'] = "1B17B772-9B55-B91D-FFCF-94E535893600";
+
+
             return {
 
                 getPokemons: function() {
@@ -16,11 +20,11 @@ angular
                     return $http({
                         method: 'POST',
                         url: 'https://api.backendless.com/v1/data/pokemon',
-                        headers: {
-                            "application-id": "4B730C92-F81E-236B-FFF0-6651FE882800",
-                            "secret-key": "CB6DE86C-6069-86C4-FF1C-9049D5AC9400"
+                        // headers: {
+                        //     "application-id": "3BAA6A88-43D6-3625-FF64-FCAB5D47EA00",
+                        //     "secret-key": "1B17B772-9B55-B91D-FFCF-94E535893600"
 
-                        },
+                        // },
                         data: pokemonData
                     });
                 },
@@ -29,11 +33,17 @@ angular
                     return $http({
                         method: 'DELETE',
                         url: 'https://api.backendless.com/v1/data/pokemon/' + pokemonId,
-                        headers: {
-                            "application-id": "4B730C92-F81E-236B-FFF0-6651FE882800",
-                            "secret-key": "CB6DE86C-6069-86C4-FF1C-9049D5AC9400"
+                        // headers: {
+                        //     "application-id": "3BAA6A88-43D6-3625-FF64-FCAB5D47EA00",
+                        //     "secret-key": "1B17B772-9B55-B91D-FFCF-94E535893600"
 
-                        }
+                        // }
+                    });
+                },
+                updatePokemon: function(pokemonId) {
+                    return $http({
+                        method: 'PUT',
+                        url: 'https://api.backendless.com/v1/data/pokemon/' + pokemonId,
                     });
                 }
 

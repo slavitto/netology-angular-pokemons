@@ -2,7 +2,7 @@
     <div class="col-md-8">
 
         <div class="list-group">
-            <a href="#/pokemons/{{singlePokemon.name }}" class="list-group-item" ng-repeat="singlePokemon in pokemons">
+            <a href="#!/pokemons/{{singlePokemon.name }}" class="list-group-item" ng-repeat="singlePokemon in pokemons">
 
                 <h4>
                     {{singlePokemon.name | uppercase }}
@@ -15,7 +15,7 @@
     <div class="col-md-4">
 
         <div class="list-group">
-            <div class="list-group-item" ng-repeat="singleBerry in berries">
+            <a href="#!/berries/{{singleBerry.name }}" class="list-group-item" ng-repeat="singleBerry in berries">
 
                 <h4>
                     {{singleBerry.name | uppercase }}
