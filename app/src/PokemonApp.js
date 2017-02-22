@@ -23,6 +23,14 @@ module('PokemonApp')
             templateUrl: 'src/CreatePokemon/CreatePokemon.html',
             controller: 'CreatePokemonCtrl'
         }).
+        when('/berries', {
+            templateUrl: 'src/BerryList/BerryList.html',
+            controller: 'BerryListCtrl'
+        }).
+        when('/berries/:berryId', {
+            templateUrl: 'src/BerryDetail/BerryDetail.html',
+            controller: 'BerryDetailCtrl'
+        }).
         otherwise({
             redirectTo: '/'
         });
