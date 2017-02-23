@@ -3,7 +3,7 @@ angular
     .factory('BerriesService', function($resource, $http) {
 
         return $resource('https://api.backendless.com/v1/data/berry/:berryId/', {
-            pokemonId: '@berryId'
+            berryId: '@berryId'
         }, {
             query: {
                 method: 'GET',
