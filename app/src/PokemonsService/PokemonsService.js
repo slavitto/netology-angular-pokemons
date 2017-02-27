@@ -5,7 +5,6 @@ angular
             $http.defaults.headers['application-id'] = "3BAA6A88-43D6-3625-FF64-FCAB5D47EA00";
             $http.defaults.headers['secret-key'] = "1B17B772-9B55-B91D-FFCF-94E535893600";
 
-
             return {
 
                 getPokemons: function() {
