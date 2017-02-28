@@ -1,8 +1,6 @@
+  <md-list-item class="noright" ng-href="#!/pokemons/{{$ctrl.pokemon.objectId }}">
+   		 <img alt="{{ $ctrl.pokemon.name }}" ng-src="{{ $ctrl.pokemon.name }}" class="md-avatar" />
+    		<p>{{$ctrl.pokemon.name | uppercase }}</p>
 
-    <a href="#!/pokemons/{{$ctrl.pokemon.objectId }}" class="list-group-item">
-
-        <h4>
-            {{$ctrl.pokemon.name | uppercase }}
-        </h4>
-
-    </a>
+    <md-button class="md-secondary" ng-click="doSecondaryAction($event)">More Info</md-button>
+  </md-list-item>
