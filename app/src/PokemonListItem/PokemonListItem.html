@@ -1,6 +1,7 @@
-  <md-list-item class="noright" ng-href="#!/pokemons/{{$ctrl.pokemon.objectId }}">
-   		 <img alt="{{ $ctrl.pokemon.name }}" ng-src="{{ $ctrl.pokemon.name }}" class="md-avatar" />
+ <md-divider></md-divider>
+ <md-list-item class="noright" ng-href="#!/pokemons/{{$ctrl.pokemon.objectId }}">
+   		 <img alt="{{ $ctrl.pokemon.name }}" ng-src="https://img03.deviantart.net/49cf/i/2011/068/a/c/pokeball_desktop_icon_by_beccerberry-d3b98cf.png" class="md-avatar">
     		<p>{{$ctrl.pokemon.name | uppercase }}</p>
-
-    <md-button class="md-secondary" ng-click="doSecondaryAction($event)">More Info</md-button>
+    		<p>{{$ctrl.pokemon.weight}}</p>
+    <md-button class="md-secondary" ng-href="#!/pokemons/{{$ctrl.pokemon.objectId }}">More Info</md-button>
   </md-list-item>
